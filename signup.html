@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up - Spotify</title>
+
+  <!-- CSS and Icon -->
+  <link rel="stylesheet" href="signup-styles.css">
+  <link rel="icon" href="spotify.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <a href="index.html">
+        <img class='logo-black' src="images/Spotify-logo-black.png" alt="logo">
+      </a>
+      <h2 class="header-h2">Sign up for free to start listening.</h2>
+    </div>
+    <div class="div-facebook-button">
+      <button class="fb-btn"><a class='fb-button-link' href="https://www.facebook.com/">Sign up with
+          facebook</a></button>
+    </div>
+    <span class="separator">or</span>
+
+    <form action="/" method="POST">
+
+      <h2 class="form-h2">Sign up with your email address</h2>
+
+      <div class="full-email-div full-div-all">
+        <div class="email-label label-div-all">
+          <label for="email" class="label-all">What's your email?</label>
+        </div>
+        <input class='input-box' type="email" name="email" id="email" placeholder="Enter your email." required>
+        <p id="false"></p>
+      </div>
+
+      <div class="full-confirm-email-div full-div-all ">
+        <div class="confirm-email-label label-div-all">
+          <label for="confirm" class="label-all">Confirm your email</label>
+        </div>
+        <input class='input-box' type="email" name="confirm" id="confirm" placeholder="Enter your email again."
+          required>
+      </div>
+
+      <div class="full-password-div full-div-all">
+        <div class="password-label label-div-all">
+          <label for="password" class="label-all">Create a password</label>
+        </div>
+        <input class='input-box' type="password" name="password" id="password" placeholder="Create a password."
+          required>
+      </div>
+
+      <div class="full-displayname-div full-div-all">
+        <div class="displayname-label label-div-all">
+          <label for="displayname" class="label-all">What should we call you?</label>
+        </div>
+        <input class='input-box' type="text" name="displayname" id="displayname" placeholder="Enter a profile name."
+          required>
+        <div class="displayname-appear-p">This appears on your profile.</div>
+      </div>
+
+      <div class="full-birthday-div full-div-all">
+        <div class="birthday-label label-div-all">
+          <label class="label-all">What's your date of birth?</label>
+        </div>
+
+        <div class="date-selection">
+          <div class="day-div">
+            <div class='birthday-label label-div-all'>
+              <label for="day" class="label-all">Day</label>
+            </div>
+            <input id='day' type="text" inputmode="numeric" maxlength="2" name="day" placeholder="DD" required
+              class="input-box-dmy">
+            <p id="demo"></p>
+          </div>
+
+          <div class="month-div">
+            <div class='birthday-label label-div-all'>
+              <label for="day" class="label-all">Month</label>
+            </div>
+            <div class="month-parent">
+              <select name="month" id="month" class="select-month-box">
+                <option disabled selected>Month</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+              </select>
+              <svg role="img" class="dropdown-icon">
+                <polyline points='20 8 12 17 4 8' fill='none' stroke='rgb(158, 158, 158)'></polyline>
+              </svg>
+            </div>
+
+          </div>
+
+          <div class="year-div">
+            <div class=' birthday-label label-div-all'>
+              <label for="day" class="label-all">Year</label>
+            </div>
+            <input type="text" inputmode="numeric" maxlength="4" name="year" min="1930" max="2021" placeholder="YYYY"
+              required class="input-box-dmy">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="gender-form">
+        <div class="gender-label label-div-all">
+          <label for="gender" class="label-all">What's your gender?</label>
+        </div>
+
+        <div class="gender-select">
+          <label class="radioContainer">
+            <span class="gender">Male</span>
+            <input type="radio" name="gender">
+            <span class="circle"></span>
+          </label>
+
+          <label class="radioContainer">
+            <span class="gender">Female</span>
+            <input type="radio" name="gender">
+            <span class="circle"></span>
+          </label>
+
+          <label class="radioContainer">
+            <span class="gender">Non-binary</span>
+            <input type="radio" name="gender">
+            <span class="circle"></span>
+          </label>
+
+        </div>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="cb1" />
+        <label class='checkbox-text' for="cb1"> Please send me news and offers from Spotify</label>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="cb2" />
+        <label class="checkbox-text" for="cb2"> Share my registration data with Spotify's content providers for <br>
+          marketing purposes.</label>
+      </div>
+
+
+
+
+      <div class="bottom-text">
+        <p class="terms">By clicking on Sign up, you agree to Spotify's <a class="termsLink"
+            href="https://www.spotify.com/us/legal/end-user-agreement/">Terms and Conditions of Use</a>.</p>
+
+        <p class="policy"> To learn more about how Spotify collects, uses, shares and protects your personal data please
+          read Spotify's <a href="https://www.spotify.com/us/legal/privacy-policy/" class="policyLink">Privacy
+            Policy</a>.</p>
+
+        <div class="sign-up-btn">
+          <button id='signUpBtn' class="signupbtn" type="submit">Sign up</button>
+        </div>
+
+        <p class="account">Have an account? <a href="#" class="accountLink">Log in.</a></p>
+      </div>
+
+
+    </form>
+
+
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+
+</html>
